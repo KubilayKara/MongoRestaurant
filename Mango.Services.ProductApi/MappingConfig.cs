@@ -8,7 +8,7 @@ namespace Mango.Services.ProductApi
     {
         public static MapperConfiguration RegisterMaps()
         {
-            var mappingConfig = new MapperConfiguration(config =>
+            MapperConfiguration mappingConfig = new MapperConfiguration(config =>
               {
                   config.CreateMap<ProductDto, Product>();
                   config.CreateMap<Product, ProductDto>();
