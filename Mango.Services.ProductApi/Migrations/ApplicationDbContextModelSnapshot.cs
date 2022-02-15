@@ -28,7 +28,7 @@ namespace Mango.Services.ProductApi.Migrations
                     b.Property<string>("CategoryName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Desription")
+                    b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
@@ -50,7 +50,7 @@ namespace Mango.Services.ProductApi.Migrations
                         {
                             ProductId = 1,
                             CategoryName = "Kırtasite",
-                            Desription = "Kurşun Kalem",
+                            Description = "Kurşun Kalem",
                             ImageUrl = "",
                             Name = "Kalem",
                             Price = 5.0
@@ -59,7 +59,7 @@ namespace Mango.Services.ProductApi.Migrations
                         {
                             ProductId = 2,
                             CategoryName = "Kırtasite",
-                            Desription = "Pelikan",
+                            Description = "Pelikan",
                             ImageUrl = "",
                             Name = "Silgi",
                             Price = 4.0
@@ -68,7 +68,7 @@ namespace Mango.Services.ProductApi.Migrations
                         {
                             ProductId = 3,
                             CategoryName = "Kırtasite",
-                            Desription = "Harita Metod",
+                            Description = "Harita Metod",
                             ImageUrl = "",
                             Name = "Defter",
                             Price = 4.0

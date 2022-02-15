@@ -34,7 +34,7 @@ namespace Mango.Services.ProductApi.Rapository
                 //result.Name = product.Name;
                 //result.Price = product.Price;
                 //result.ImageUrl = product.ImageUrl;
-                //result.Desription = product.Desription;
+                //result.Description = product.Description;
 
                 _db.Update(product);
                 

@@ -19,7 +19,7 @@ namespace Mango.Services.ProductsApi.DbContexts
             {
                 ProductId = 1,
                 CategoryName = "Kırtasite",
-                Desription = "Kurşun Kalem",
+                Description = "Kurşun Kalem",
                 Name = "Kalem",
                 ImageUrl="",
                 Price = 5
@@ -28,7 +28,7 @@ namespace Mango.Services.ProductsApi.DbContexts
             {
                 ProductId = 2,
                 CategoryName = "Kırtasite",
-                Desription = "Pelikan",
+                Description = "Pelikan",
                 Name = "Silgi",
                 ImageUrl = "",
                 Price = 4
@@ -37,7 +37,7 @@ namespace Mango.Services.ProductsApi.DbContexts
             {
                 ProductId = 3,
                 CategoryName = "Kırtasite",
-                Desription = "Harita Metod",
+                Description = "Harita Metod",
                 Name = "Defter",
                 ImageUrl = "",
                 Price = 4

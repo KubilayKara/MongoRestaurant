@@ -10,7 +10,7 @@ namespace Mongo.Web.Services
 {
     public class BaseService : IBaseService
     {
-        public ResponseDto responseModel { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public ResponseDto responseModel { get; set; }
 
         private readonly IHttpClientFactory _httpClient;
 
@@ -24,7 +24,7 @@ namespace Mongo.Web.Services
         {
             try
             {
-                var client = HttpClient.CreateClient("MangoApi");
+                var client = _httpClient.CreateClient("MangoApi");
                 HttpRequestMessage message = new HttpRequestMessage();
                 message.Headers.Add("Accept", "application/json");
                 message.RequestUri = new Uri(request.Url);

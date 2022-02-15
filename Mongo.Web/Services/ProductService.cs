@@ -21,7 +21,7 @@ namespace Mongo.Web.Services
             {
                 ApiType = StaticDictionary.ApiType.POST,
                 Data = productDto,
-                Url = StaticDictionary.ProductApiBase + "/api/products",
+                Url = StaticDictionary.ProductApiBase + "api/products",
                 AccessToken = string.Empty
 
             });
@@ -32,7 +32,7 @@ namespace Mongo.Web.Services
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType = StaticDictionary.ApiType.DELETE,
-                Url = $"{StaticDictionary.ProductApiBase}/api/products/{productId.ToString()}",
+                Url = $"{StaticDictionary.ProductApiBase}api/products/{productId.ToString()}",
                 AccessToken = string.Empty
 
             });
@@ -43,7 +43,7 @@ namespace Mongo.Web.Services
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType = StaticDictionary.ApiType.GET,
-                Url = $"{StaticDictionary.ProductApiBase}/api/products/{productId.ToString()}",
+                Url = $"{StaticDictionary.ProductApiBase}api/products/{productId.ToString()}",
                 AccessToken = string.Empty
 
             });
@@ -54,7 +54,7 @@ namespace Mongo.Web.Services
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType = StaticDictionary.ApiType.GET,
-                Url = StaticDictionary.ProductApiBase + "/api/products",
+                Url = StaticDictionary.ProductApiBase + "api/products",
                 AccessToken = string.Empty
 
             });
@@ -66,7 +66,7 @@ namespace Mongo.Web.Services
             {
                 ApiType = StaticDictionary.ApiType.PUT,
                 Data = productDto,
-                Url = StaticDictionary.ProductApiBase + "/api/products",
+                Url = StaticDictionary.ProductApiBase + "api/products",
                 AccessToken = string.Empty
 
             });

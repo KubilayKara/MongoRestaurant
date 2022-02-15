@@ -8,17 +8,17 @@ namespace Mango.Services.ProductApi.Migrations
         {
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "ProductId", "CategoryName", "Desription", "ImageUrl", "Name", "Price" },
+                columns: new[] { "ProductId", "CategoryName", "Description", "ImageUrl", "Name", "Price" },
                 values: new object[] { 1, "Kırtasite", "Kurşun Kalem", "", "Kalem", 5.0 });
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "ProductId", "CategoryName", "Desription", "ImageUrl", "Name", "Price" },
+                columns: new[] { "ProductId", "CategoryName", "Description", "ImageUrl", "Name", "Price" },
                 values: new object[] { 2, "Kırtasite", "Pelikan", "", "Silgi", 4.0 });
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "ProductId", "CategoryName", "Desription", "ImageUrl", "Name", "Price" },
+                columns: new[] { "ProductId", "CategoryName", "Description", "ImageUrl", "Name", "Price" },
                 values: new object[] { 3, "Kırtasite", "Harita Metod", "", "Defter", 4.0 });
         }
 
