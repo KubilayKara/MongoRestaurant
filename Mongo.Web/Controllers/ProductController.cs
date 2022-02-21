@@ -28,7 +28,6 @@ namespace Mongo.Web.Controllers
         }
         public async Task<IActionResult> ProductCreate()
         {
-           
             return View();
         }
         [HttpPost]
@@ -44,5 +43,56 @@ namespace Mongo.Web.Controllers
             //response.Result
             return View(model);
         }
+
+        public async Task<IActionResult> ProductEdit(int productId)
+        {
+
+            ResponseDto response = await _productService.GetProductByIdAsync<ResponseDto>(productId);
+            if (response != null && response.IsSuccess)
+            {
+                ProductDto product = JsonConvert.DeserializeObject<ProductDto>(Convert.ToString(response.Result));
+                return View(product);
+            }
+            return NotFound();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ProductEdit(ProductDto model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            ResponseDto response = await _productService.UpdateProductAsync<ResponseDto>(model);
+            if (response != null && response.IsSuccess)
+                return RedirectToAction(nameof(ProductIndex));
+            //response.Result
+            return View(model);
+        }
+
+        public async Task<IActionResult> ProductDelete(int productId)
+        {
+
+            ResponseDto response = await _productService.GetProductByIdAsync<ResponseDto>(productId);
+            if (response != null && response.IsSuccess)
+            {
+                ProductDto product = JsonConvert.DeserializeObject<ProductDto>(Convert.ToString(response.Result));
+                return View(product);
+            }
+            return NotFound();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ProductDelete(ProductDto model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            ResponseDto response = await _productService.DeleteProductAsync<ResponseDto>(model.ProductId);
+            if (response != null && response.IsSuccess)
+                return RedirectToAction(nameof(ProductIndex));
+            //response.Result
+            return View(model);
+        }
+
     }
 }
